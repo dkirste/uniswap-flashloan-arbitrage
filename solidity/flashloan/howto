@@ -1,0 +1,12 @@
+# Deploy contract
+truffle deploy
+
+# Interact with contract
+truffle console
+flashloan = await flashloan.deployed()
+flashloan.getToken0.call()
+
+# Connect to ropsten via console
+npx truffle console --network ropsten
+npx truffle migrate --network ropsten #First address will be used to deploy -> look in ropsten.etherscan.io
+flashloan.twoCurrencyArbitrage('0x681A4164703351d6AceBA9D7038b573b444d3353', 0, web3.utils.toWei('3.5', 'ether'))
